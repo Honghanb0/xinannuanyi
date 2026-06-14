@@ -1,0 +1,39 @@
+/* 导入通用样式 */
+@import url('common_styles.css');
+
+/* 审核首页特定样式 */
+/* 已在common_styles.css中定义.header和.profile样式 */
+
+/* 可以添加页面特有的样式 */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(42, 157, 143, 0.1);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.dashboard-card h3 {
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.dashboard-card .count {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary);
+}

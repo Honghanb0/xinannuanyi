@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-AI管理</title>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common_styles.css">
+    <link rel="stylesheet" href="css/ai_management_styles.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <div class="admin-header-inner">
+            <div>
+                <p class="eyebrow">AI Settings</p>
+                <h1>AI 管理</h1>
+                <p>统一管理 AI 访问令牌与助手能力，让智能侧边栏保持可用。</p>
+            </div>
+            <nav class="navbar">
+                <a href="9 audit_home.html" class="nav-btn">审核主页</a>
+                <a href="7 judging.html" class="nav-btn">帖子审核</a>
+                <a href="11 account_audit.html" class="nav-btn">账号审核</a>
+                <a href="12 comment_audit.html" class="nav-btn">评论审核</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container admin-page">
+        <a href="9 audit_home.html" class="nav-btn back-button">← 返回审核主页</a>
+
+        <section class="module-panel ai-token-section">
+            <div class="module-toolbar">
+                <div>
+                    <div class="module-title">个人访问令牌</div>
+                    <p class="text-muted">令牌仅用于当前环境的 AI 能力调用，请妥善保管。</p>
+                </div>
+                <span class="status-chip">安全配置</span>
+            </div>
+
+            <label for="ai-token-input">访问令牌</label>
+            <input id="ai-token-input" type="password" class="token-input mb-4" placeholder="输入个人访问令牌">
+            <button class="submit-btn">保存令牌</button>
+
+            <div class="ai-status">
+                保存后可在右侧 AI 助手中使用智能问答、内容润色与审核辅助能力。
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/sdk_utils.js"></script>
+    <script type="module" src="js/ai_management_script.js"></script>
+    <script type="module" src="js/ux_enhance.js"></script>
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+
+</html>

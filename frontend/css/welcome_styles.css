@@ -1,0 +1,413 @@
+/* 引入公共样式 */
+@import url('common_styles.css');
+
+/* 欢迎页面特定样式 */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    background: radial-gradient(circle at top left, rgba(42, 157, 143, 0.12), transparent 34%),
+                linear-gradient(135deg, #f4fbf9 0%, #edf6ff 52%, #fff8e8 100%);
+}
+
+.page-title {
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.category-jump-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), #1988e0);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(34, 120, 110, 0.24);
+}
+
+.category-jump-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* 段落优化 */
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-item::before {
+    content: "📖";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.15;
+    font-size: 2.5rem;
+}
+
+.article-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.2);
+}
+
+.article-item a {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.article-item:hover a {
+    color: var(--primary);
+}
+
+/* 添加文章标签 */
+.article-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+.article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.article h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.article-meta {
+    color: #6c757d;
+    margin: 15px 0;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.article-meta::before {
+    content: "📅";
+    font-size: 1.1em;
+}
+
+.article-content {
+    color: #495057;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.2em;
+    text-indent: 2em;
+}
+
+.audit-controls {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    backdrop-filter: blur(5px);
+}
+
+.audit-controls h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audit-controls h3::before {
+    content: "📝";
+    font-size: 1.2em;
+}
+
+.audit-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.status-approved {
+    background: rgba(223, 240, 216, 0.9);
+    color: #3c763d;
+}
+
+.status-rejected {
+    background: rgba(242, 222, 222, 0.9);
+    color: #a94442;
+}
+
+/* 章节标题样式 */
+.article-content h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--accent);
+    position: relative;
+}
+
+/* 段落优化 */
+.article-content p {
+    margin-bottom: 1.5rem;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.article-item::before {
+    content: "📖";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.15;
+    font-size: 2.5rem;
+}
+
+.article-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.2);
+}
+
+.article-item a {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.article-item:hover a {
+    color: var(--primary);
+}
+
+/* 添加文章标签 */  
+.article-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+/* 搜索框样式 */
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
+}
+
+.forum-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 10px;
+    flex-wrap: wrap;
+}
+
+.result-count {
+    color: #5b6774;
+    font-size: 0.92rem;
+}
+
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-select {
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #d4dde5;
+    border-radius: 10px;
+    background: #fff;
+    color: #324455;
+}
+
+.clear-btn {
+    min-height: 40px;
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+
+/* 文章列表样式 */
+.article-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 18px 18px 14px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    border: 1px solid rgba(42, 157, 143, 0.08);
+}
+
+.article-item:hover {
+    border-left-color: var(--primary);
+}
+
+.article-item a {
+    font-size: 1.04rem;
+    font-weight: 700;
+}
+
+.article-meta-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #6b7683;
+}
+
+.article-snippet {
+    margin-top: 10px;
+    color: #4d5c6b;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.article-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(42, 157, 143, 0.1);
+    color: #256e63;
+}
+
+.no-results {
+    text-align: center;
+    padding: 38px 16px;
+    border-radius: 12px;
+    color: #6b7683;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px dashed rgba(42, 157, 143, 0.35);
+}
+
+.rich-empty i {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.14), rgba(52, 152, 219, 0.16));
+    color: var(--primary);
+    font-size: 1.45rem;
+}
+
+.rich-empty h3 {
+    margin: 0 0 8px;
+    color: var(--secondary);
+}
+
+.rich-empty p {
+    margin: 0 auto 18px;
+    max-width: 420px;
+    line-height: 1.7;
+}
+
+.load-more-btn {
+    align-self: center;
+    margin-top: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+}
+
+.forum-skeleton {
+    display: grid;
+    gap: 14px;
+}
+
+.skeleton-card {
+    height: 112px;
+    border-radius: 16px;
+    background:
+        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(232, 247, 244, 0.78));
+    background-size: 220px 100%, 100% 100%;
+    background-position: -220px 0, 0 0;
+    border: 1px solid rgba(42, 157, 143, 0.08);
+    animation: skeletonShine 1.2s ease-in-out infinite;
+}
+
+@keyframes skeletonShine {
+    to {
+        background-position: calc(100% + 220px) 0, 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .forum-toolbar {
+        align-items: stretch;
+    }
+
+    .toolbar-actions {
+        width: 100%;
+    }
+
+    .sort-select,
+    .clear-btn {
+        flex: 1;
+    }
+}
